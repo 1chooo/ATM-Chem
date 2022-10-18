@@ -21,9 +21,9 @@ plt.figure(figsize=(20, 15))
 plt.plot(data["date"], data["de-s"], "k-o")
 plt.plot(data["date"], data["avg"], "r-o")
 
-plt.xlabel("Year")
-plt.ylabel("CO2 mole fraction (ppm)")
-plt.title("Recently monthly Mean CO2 at Mauna Loa Observatory")
+plt.xlabel("Year", fontsize=16)
+plt.ylabel("CO2 mole fraction (ppm)", fontsize=16)
+plt.title("Recently monthly Mean CO2 at Mauna Loa Observatory", fontsize=20)
 
 plt.grid()
 plt.savefig("../../imgs/CO2/co2_recent_monthly_mean.jpg", dpi=300)
