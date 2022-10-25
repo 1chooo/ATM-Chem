@@ -62,7 +62,7 @@
 # reasons.  Usually these changes are minor.
 # 
 
-# year   month       decimal       average   average_unc         trend     trend_unc
+  year   month       decimal       average   average_unc         trend     trend_unc
   1997       7      1997.542          4.00          0.01          4.01          0.00
   1997       8      1997.625          4.00          0.01          4.02          0.00
   1997       9      1997.708          4.02          0.01          4.04          0.00
