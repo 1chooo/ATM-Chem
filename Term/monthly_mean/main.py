@@ -95,7 +95,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["CO2 average", "CO2 season"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/CO2/co2_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/CO2/co2_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/co2_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -129,7 +129,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["CO2 average", "CO2 season"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/CO2/co2_recent_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/CO2/co2_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/co2_recent_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -167,7 +167,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["CH4 average", "CH4 trend"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/CH4/ch4_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/CH4/ch4_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/ch4_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -196,7 +196,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["CH4 average", "CH4 trend"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/CH4/ch4_recent_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/CH4/ch4_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/ch4_recent_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -234,7 +234,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["N2O average", "N2O trend"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/N2O/n2o_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/N2O/n2o_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/n2o_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -263,7 +263,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["N2O average", "N2O trend"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/n2o/n2o_recent_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/n2o/n2o_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/n2o_recent_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -296,7 +296,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["SF6 average", "SF6 trend"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/SF6/sf6_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/SF6/sf6_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/sf6_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -330,7 +330,7 @@ plt.tick_params(axis="both", labelsize=16)
 plt.legend(["SF6 average", "SF6 trend"], loc ="lower right")
 
 plt.grid()
-plt.savefig("../../imgs/SF6/sf6_recent_monthly_mean.jpg", dpi=300)
+# plt.savefig("../../imgs/SF6/sf6_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/sf6_recent_monthly_mean.jpg", dpi=300)
 plt.show()
 
@@ -340,10 +340,10 @@ plt.show()
 # ![plot](../../src/imgs/1chooo/icon.png)
 
 # %%
-def add_water_mark(imgs_path) :
+def add_water_mark(imgs_path, type) :
         os.chdir(imgs_path)
 
-        imgs = glob.glob('./*.jpg')
+        imgs = glob.glob(f'./*.jpg')
         icon = Image.open('../1chooo/icon.png')
         icon_w, icon_h = icon.size
 
@@ -357,7 +357,7 @@ def add_water_mark(imgs_path) :
             # x = int(img_w - icon_w)
             # y = int(img_h - icon_h)
             img.paste(icon, (750, 550), icon)   
-            img.save(f'../watermark/{name}')
+            img.save(f'../watermark/{type}/{name}')
 
         return
 
@@ -384,9 +384,8 @@ imgs_path = get_imgs_path()
 
 os.chdir(imgs_path)
 
-add_water_mark(imgs_path)
+type = "monthly_mean"
 
-# %%
-
+add_water_mark(imgs_path, type)
 
 
