@@ -58,9 +58,9 @@
 # depending on recalibration of the reference gas mixtures used, and other quality
 # control procedures. Occasionally, earlier years may also change for the same
 # reasons.  Usually these changes are minor.
-# 
 
-# year     mean      unc
+
+  year     mean      unc
   2001   316.36     0.14
   2002   316.94     0.12
   2003   317.63     0.12
