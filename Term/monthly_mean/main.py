@@ -99,6 +99,24 @@ plt.grid()
 plt.savefig("../../imgs/monthly_mean/co2_monthly_mean.jpg", dpi=300)
 plt.show()
 
+# %%
+plt.figure(figsize=(20, 15))
+plt.plot(co2_monthly_mean_data["date"], co2_monthly_mean_data["unc"], "-o")
+# plt.plot(co2_monthly_mean_data["date"], co2_monthly_mean_data["avg"], "r-o")
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Atomospheric CO2 at Mauna Loa Observatory (Uncertainty)", fontsize=24)
+
+# plt.tick_params(axis="both", labelsize=16, color="red")
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["Uncertainty", "CO2 season"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/CO2/co2_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/co2_monthly_mean_uncertainty.jpg", dpi=300)
+plt.show()
+
 # %% [markdown]
 # ### Plot for the recent monthly mean.
 
@@ -131,6 +149,24 @@ plt.legend(["CO2 average", "CO2 season"], loc ="lower right")
 plt.grid()
 # plt.savefig("../../imgs/CO2/co2_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/co2_recent_monthly_mean.jpg", dpi=300)
+plt.show()
+
+# %%
+plt.figure(figsize=(20, 15))
+plt.plot(co2_recent_monthly_mean_data["date"], co2_recent_monthly_mean_data["unc"], "-o")
+# plt.plot(co2_recent_monthly_mean_data["date"], co2_recent_monthly_mean_data["avg"], "r-o")
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Recent Monthly Mean CO2 at Mauna Loa Observatory (Uncertainty)", fontsize=24)
+
+# plt.tick_params(axis="both", labelsize=16, color="red")
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["Uncertainty", "CO2 season"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/CO2/co2_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/co2_recent_monthly_mean_uncertainty.jpg", dpi=300)
 plt.show()
 
 # %% [markdown]
@@ -172,6 +208,24 @@ plt.savefig("../../imgs/monthly_mean/ch4_monthly_mean.jpg", dpi=300)
 plt.show()
 
 # %%
+plt.figure(figsize=(20, 15))
+plt.plot(ch4_monthly_mean_data["date"], ch4_monthly_mean_data["avg_unc"], "k-o")
+plt.plot(ch4_monthly_mean_data["date"], ch4_monthly_mean_data["trend_unc"], "r-o")
+
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Globaly Monthly Mean CH4 Uncertainty", fontsize=24)
+
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["CH4 average uncertainty", "CH4 trend uncertainty"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/CH4/ch4_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/ch4_monthly_mean_uncertainty.jpg", dpi=300)
+plt.show()
+
+# %%
 type = "ch4"
 skip_rows = 478
 data_title = ["year", "month", "date", "avg", "avg_unc", "trend", "trend_unc"]
@@ -198,6 +252,24 @@ plt.legend(["CH4 average", "CH4 trend"], loc ="lower right")
 plt.grid()
 # plt.savefig("../../imgs/CH4/ch4_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/ch4_recent_monthly_mean.jpg", dpi=300)
+plt.show()
+
+# %%
+plt.figure(figsize=(20, 15))
+plt.plot(ch4_recent_monthly_mean_data["date"], ch4_recent_monthly_mean_data["avg_unc"], "k-o")
+plt.plot(ch4_recent_monthly_mean_data["date"], ch4_recent_monthly_mean_data["trend_unc"], "r-o")
+
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Recent Globaly Monthly Mean CH4 Uncertainty", fontsize=24)
+
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["CH4 average uncertainty", "CH4 trend uncertainty"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/CH4/ch4_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/ch4_recent_monthly_mean_uncertainty.jpg", dpi=300)
 plt.show()
 
 # %% [markdown]
@@ -239,6 +311,24 @@ plt.savefig("../../imgs/monthly_mean/n2o_monthly_mean.jpg", dpi=300)
 plt.show()
 
 # %%
+plt.figure(figsize=(20, 15))
+plt.plot(n2o_monthly_mean_data["date"], n2o_monthly_mean_data["avg_unc"], "r-o")
+plt.plot(n2o_monthly_mean_data["date"], n2o_monthly_mean_data["trend_unc"], "k-o")
+
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Globaly Monthly Mean N2O Uncertainty", fontsize=24)
+
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["N2O average uncertainty", "N2O trend uncertainty"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/N2O/n2o_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/n2o_monthly_mean_uncertainty.jpg", dpi=300)
+plt.show()
+
+# %%
 type = "n2o"
 skip_rows = 268
 data_title = ["year", "month", "date", "avg", "avg_unc", "trend", "trend_unc"]
@@ -265,6 +355,24 @@ plt.legend(["N2O average", "N2O trend"], loc ="lower right")
 plt.grid()
 # plt.savefig("../../imgs/n2o/n2o_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/n2o_recent_monthly_mean.jpg", dpi=300)
+plt.show()
+
+# %%
+plt.figure(figsize=(20, 15))
+plt.plot(n2o_recent_monthly_mean_data["date"], n2o_recent_monthly_mean_data["avg_unc"], "r-o")
+plt.plot(n2o_recent_monthly_mean_data["date"], n2o_recent_monthly_mean_data["trend_unc"], "k-o")
+
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Recent Globaly Monthly Mean N2O Uncertainty", fontsize=24)
+
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["N2O average uncertainty", "N2O trend uncertainty"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/N2O/n2o_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/n2o_recent_monthly_mean_uncertainty.jpg", dpi=300)
 plt.show()
 
 # %% [markdown]
@@ -300,6 +408,24 @@ plt.grid()
 plt.savefig("../../imgs/monthly_mean/sf6_monthly_mean.jpg", dpi=300)
 plt.show()
 
+# %%
+plt.figure(figsize=(20, 15))
+plt.plot(sf6_monthly_mean_data["date"], sf6_monthly_mean_data["avg_unc"], "r-o")
+plt.plot(sf6_monthly_mean_data["date"], sf6_monthly_mean_data["trend_unc"], "k-o")
+
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Globaly Monthly Mean SF6 Uncertainty", fontsize=24)
+
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["SF6 average uncertainty", "SF6 trend certainty"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/SF6/sf6_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/sf6_monthly_mean_certainty.jpg", dpi=300)
+plt.show()
+
 # %% [markdown]
 # ### Plot for the monthly mean.
 # 
@@ -332,6 +458,24 @@ plt.legend(["SF6 average", "SF6 trend"], loc ="lower right")
 plt.grid()
 # plt.savefig("../../imgs/SF6/sf6_recent_monthly_mean.jpg", dpi=300)
 plt.savefig("../../imgs/monthly_mean/sf6_recent_monthly_mean.jpg", dpi=300)
+plt.show()
+
+# %%
+plt.figure(figsize=(20, 15))
+plt.plot(sf6_monthly_mean_data["date"], sf6_monthly_mean_data["avg_unc"], "r-o")
+plt.plot(sf6_monthly_mean_data["date"], sf6_monthly_mean_data["trend_unc"], "k-o")
+
+
+plt.xlabel("Year", fontsize=20)
+plt.ylabel("Uncertainty", fontsize=20)
+plt.title("Recent Globaly Monthly Mean SF6 Uncertainty", fontsize=24)
+
+plt.tick_params(axis="both", labelsize=16)
+plt.legend(["SF6 average uncertainty", "SF6 trend certainty"], loc ="lower right")
+
+plt.grid()
+# plt.savefig("../../imgs/SF6/sf6_monthly_mean.jpg", dpi=300)
+plt.savefig("../../imgs/monthly_mean/sf6_recent_monthly_mean_certainty.jpg", dpi=300)
 plt.show()
 
 # %% [markdown]
@@ -387,5 +531,8 @@ os.chdir(imgs_path)
 type = "monthly_mean"
 
 add_water_mark(imgs_path, type)
+
+# %%
+
 
 
