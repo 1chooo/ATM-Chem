@@ -46,7 +46,8 @@
 # The week "10 yr ago" is exactly 10*365 days +3 days (for leap years) ago.
 #
 #      Start of week      CO2 molfrac           (-999.99 = no data)  increase
-# (yr, mon, day, decimal)    (ppm)  #days       1 yr ago  10 yr ago  since 1800
+
+  yr   mon day  decimal      ppm     days       1_yr_ago  10_yr_ago  since_1800
   1974   5  19  1974.3781    333.37  5          -999.99   -999.99     50.39
   1974   5  26  1974.3973    332.95  6          -999.99   -999.99     50.05
   1974   6   2  1974.4164    332.35  5          -999.99   -999.99     49.59
