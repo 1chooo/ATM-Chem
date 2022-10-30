@@ -56,7 +56,8 @@
 # reasons.  Usually these changes are minor.
 #
 # CO2 expressed as a mole fraction in dry air, micromol/mol, abbreviated as ppm 
-# year     ann inc         unc
+
+  year     ann_inc         unc
   1959        0.94        0.11
   1960        0.50        0.11
   1961        0.96        0.11

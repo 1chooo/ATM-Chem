@@ -60,8 +60,8 @@
 # depending on recalibration of the reference gas mixtures used, and other quality
 # control procedures. Occasionally, earlier years may also change for the same
 # reasons.  Usually these changes are minor.
-# 
-# year     ann inc         unc
+
+  year     ann_inc         unc
   1984       12.81        0.88
   1985       12.31        0.98
   1986       12.90        0.72
